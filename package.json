@@ -1,19 +1,21 @@
 {
-  "name": "shopping",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "test": "node app.js",
-    "dev": "nodemon app.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "mongodb": "^3.6.2",
-    "mongoose": "^5.10.5"
-  }
+	"name": "shopping",
+	"version": "1.0.0",
+	"description": "Build mern stack application",
+	"main": "app.js",
+	"scripts": {
+		"start": "node app.js",
+		"dev": "nodemon app.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"body-parser": "^1.19.0",
+		"config": "^3.3.1",
+		"cors": "^2.8.5",
+		"express": "^4.17.1",
+		"mongodb": "^3.6.2",
+		"mongoose": "^5.10.5"
+	}
 }

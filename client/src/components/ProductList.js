@@ -36,36 +36,37 @@ const ProductList = ({ products, addToCart }) => {
           ))
         }
       </Fade>
-      <Modal ariaHideApp={false} isOpen={showModal}>
-        {
-          product && <div className="productDetail">
-            <header>
-              <h3> Enjoy your shopping time  </h3>
-              <IconButton onClick={hideProductDetail} ><CloseIcon /> </IconButton>
-            </header>
-            <main>
-              <div className="productDetail__left">
-                <img src={product.image} alt={product.title} />
-              </div>
-              <div className="productDetail__right">
-                <h3> {product.title} </h3>
-                <p>
-                  {product.description}
-                </p>
-                <div className="sizes">
-                  Alailable sizes :  {
-                    product.availableSizes.map(size => <span key={size}> {size} </span>)
-                  }
-
+      <Fade bottom cascade>
+        <Modal ariaHideApp={false} isOpen={showModal}>
+          {
+            product && <div className="productDetail">
+              <header>
+                <h3> Enjoy your shopping time  </h3>
+                <IconButton onClick={hideProductDetail} ><CloseIcon /> </IconButton>
+              </header>
+              <main>
+                <div className="productDetail__left">
+                  <img src={product.image} alt={product.title} />
                 </div>
-                <p> $ <strong> {product.price} </strong> </p>
-                <button className="btn" onClick={() => addToCart(product)} >Add to basket</button>
-              </div>
-            </main>
-          </div>
-        }
+                <div className="productDetail__right">
+                  <h3> {product.title} </h3>
+                  <p>
+                    {product.description}
+                  </p>
+                  <div className="sizes">
+                    Alailable sizes :  {
+                      product.availableSizes.map(size => <span key={size}> {size} </span>)
+                    }
 
-      </Modal>
+                  </div>
+                  <p> $ <strong> {product.price} </strong> </p>
+                  <button className="btn" onClick={() => addToCart(product)} >Add to basket</button>
+                </div>
+              </main>
+            </div>
+          }
+        </Modal>
+      </Fade>
     </main>
   )
 }
